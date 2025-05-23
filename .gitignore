@@ -16,7 +16,8 @@
 # Mono auto generated files
 mono_crash.*
 # Ignore BlazorForKids embedded license
-EmbededLicense*
+EmbeddedLicense*
+
 
 # Build results
 [Dd]ebug/
