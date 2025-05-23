@@ -1,0 +1,6 @@
+<Project Sdk="BlazorForKids.Sdk.Domain/9.1.2">
+<PropertyGroup>
+  <RootNamespace>BlazorForKidsSampleDatabase.Domain</RootNamespace>
+</PropertyGroup>
+</Project>
+  

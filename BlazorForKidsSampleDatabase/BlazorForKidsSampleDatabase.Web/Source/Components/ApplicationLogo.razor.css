@@ -1,0 +1,13 @@
+﻿h3{
+   
+    font-size: 1.5rem;
+    height: 100%;
+    align-content: center;
+}
+
+a{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+    padding: 1ch;
+}

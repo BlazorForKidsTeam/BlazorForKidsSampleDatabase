@@ -1,0 +1,9 @@
+<Project Sdk="BlazorForKids.Sdk.Web/9.1.2">
+<PropertyGroup>
+  <RootNamespace>BlazorForKidsSampleDatabase.Web</RootNamespace>
+</PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BootstrapIconsForDotNet" Version="1.1.0" />
+    <ProjectReference Include="..\BlazorForKidsSampleDatabase.Domain\BlazorForKidsSampleDatabase.Domain.csproj" />
+  </ItemGroup>
+</Project>

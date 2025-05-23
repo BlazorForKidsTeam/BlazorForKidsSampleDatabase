@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.36105.23 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorForKidsSampleDatabase.Domain", "BlazorForKidsSampleDatabase\BlazorForKidsSampleDatabase.Domain\BlazorForKidsSampleDatabase.Domain.csproj", "{39CF346E-51F6-4473-9BAB-750EE04EAB44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorForKidsSampleDatabase.Web", "BlazorForKidsSampleDatabase\BlazorForKidsSampleDatabase.Web\BlazorForKidsSampleDatabase.Web.csproj", "{1401DEBC-B33A-442C-BEF8-63444ADFFFBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39CF346E-51F6-4473-9BAB-750EE04EAB44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39CF346E-51F6-4473-9BAB-750EE04EAB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39CF346E-51F6-4473-9BAB-750EE04EAB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39CF346E-51F6-4473-9BAB-750EE04EAB44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1401DEBC-B33A-442C-BEF8-63444ADFFFBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1401DEBC-B33A-442C-BEF8-63444ADFFFBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1401DEBC-B33A-442C-BEF8-63444ADFFFBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1401DEBC-B33A-442C-BEF8-63444ADFFFBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F523FC43-EA32-46E2-95C6-4FB7F72F40A9}
+	EndGlobalSection
+EndGlobal

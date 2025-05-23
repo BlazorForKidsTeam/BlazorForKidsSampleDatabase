@@ -1,0 +1,47 @@
+﻿@page "/Error"
+@inject IWebHostEnvironment Env
+@using System.Diagnostics
+@using BootstrapIconsForDotNet
+@using BlazorForKids.Designer.Web.Widgets.Shared
+<PageTitle>Error</PageTitle>
+
+@if (Env.IsDevelopment())
+{
+    <h1 class="text-danger">An error occurred.</h1>
+    <h2 class="text-danger">Detailed Information (Development Mode)</h2>
+
+    @if (ShowRequestId)
+    {
+        <p>
+            <strong>Request ID:</strong> <code>@RequestId</code>
+        </p>
+    }
+
+    <p>The application is running in <strong>Development</strong> environment. Below is debug information to help identify the problem.</p>
+
+    <pre>@(ExceptionDetails)</pre>
+}
+else
+{
+    <div class="bk-centered">
+        <BkSvg Svg="@Icons.EMOJI_SUNGLASSES_FILL"></BkSvg>
+        <h1 class="text-danger">Something went wrong.</h1>
+        <p>We encountered an unexpected error while processing your request.</p>
+        <p>Our development team has been notified and is working to resolve the issue.</p>
+        <p><a href="/">➡️ Return to Home Page</a></p>
+    </div>
+}
+
+@code {
+    [CascadingParameter]
+    private HttpContext? HttpContext { get; set; }
+
+    private string? RequestId { get; set; }
+    private bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    private string ExceptionDetails => Activity.Current?.Id ?? "No detailed exception available.";
+
+    protected override void OnInitialized()
+    {
+        RequestId = Activity.Current?.Id ?? HttpContext?.TraceIdentifier;
+    }
+}
