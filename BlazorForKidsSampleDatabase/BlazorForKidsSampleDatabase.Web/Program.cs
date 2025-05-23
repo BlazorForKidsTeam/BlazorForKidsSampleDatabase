@@ -51,7 +51,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     //uncomment below statement to create database and seed sample data
-    //await app.SeedSampleData();
+    await app.SeedSampleData();
 }
 else
 {

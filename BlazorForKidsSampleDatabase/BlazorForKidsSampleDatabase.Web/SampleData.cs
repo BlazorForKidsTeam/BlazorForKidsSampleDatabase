@@ -17,6 +17,8 @@ namespace BlazorForKidsSampleDatabase.Web
             await dbContext.Database.EnsureDeletedAsync();
             await dbContext.Database.EnsureCreatedAsync();
 
+            await dbContext.SeedDepartments();
+            await dbContext.SeedEmployee();
         }
 
         private static async Task CreateSampleUsersAndRoles(AsyncServiceScope scope)
@@ -95,6 +97,27 @@ namespace BlazorForKidsSampleDatabase.Web
         }
 
 
-        
+        private static async Task SeedDepartments(this ApplicationDbContext context)
+        {
+            context.Department.Add(Department.Create("Production"));
+            context.Department.Add(Department.Create("Quality"));
+            context.Department.Add(Department.Create("Sales"));
+
+            await context.SaveChangesAsync();
+        }
+        private static async Task SeedEmployee(this ApplicationDbContext context)
+        {
+            var departments = await context.Department.ToListAsync();
+
+            for (int i = 0; i < 20; i++)
+            {
+                var department = departments[Random.Shared.Next(departments.Count)];
+                var employee = Employee.Create($"FirstName{i}", $"LastName{i}", department.Id);
+                context.Employee.Add(employee);
+            }
+
+            await context.SaveChangesAsync();
+        }
+
     }
 }

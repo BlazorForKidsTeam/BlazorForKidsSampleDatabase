@@ -9,15 +9,15 @@ internal static class EmbeddedLicense
 {
     internal static readonly LicenseInfo License = new LicenseInfo
     {
-        Signature = "SpT+4TGp8ot1AZzQmFo9aEl1MHtTSSZty5VCagFEjXDFJLQHtsOvdXnL1KOm800+Vcw16wSP+aD7tl7/mU2p8dnVy6OwtMx4zTq60CMlU6sYBKZneYvAUf6mNlOwqDMGllEkaRpZ/RicoxTHs7cEA6u0uPn4aTeW+lLBJ55F+p+NUd2+vD11FvOwE4YUhaTY0Pks+Rb3Q6x8dYcBRPGqMuPIb6gk3f9T15QRbNDKnfDXLey1uTBQqMHSlhbcCT8AZRQSpdKoZl0ExwMtLFL13D3x38mXIN5IFQWF/mOfIG9kuMGXd9fGDhRBcdn1oqgJQsJpPrcizEtejjVb30PUjA==",
+        Signature = "lYIZ4v4ektCldsXlqqB0AyDgUe6xGIVVUxJ+5WNsFPzjVB+P3/Oqdc8vkyHDJ438kh885iCBAxj96KpsWrKIIHvw6JdGv0vYSUE1JsrdtQEulD4jUxC6vqi/nbmVb0J2QiFjnSudspFXCJOudk6tOFy0W806ubFPjq8WQ46ckWW/dL1wa5iTJv6rlYEMlHJckFWUHIw1AlU+8pI4JGlEWA2ye5YZLPrpRVzQhhuyIukZHtWd5XPo5nPUnhoo86e5eFyJHeWYk/1zfjhg4uMO9ww+3ZTLC9sKUEUWH1b6FRc/+Du65600VBJyC5AC62ahDm3P7aXA7At7n9tMJ4Keyw==",
         Payload = new UserLicenceInfo
         {
             Email = "bumblucian@yahoo.com",
-            ApiKey = "38dd8acc-4424-42c0-ab0a-f706ac758c92",
+            ApiKey = "c9e41ef7-61b2-4485-a979-6b780ab002eb",
             Subscription = "Demo",
             ExpirationDate = DateTimeOffset.Parse("2030-05-04T00:00:00.0000000-07:00"),
-            CreatedDate = DateTimeOffset.Parse("2025-05-23T01:37:58.6153813-07:00"),
-            RefreshDate = DateTimeOffset.Parse("2025-05-23T01:37:58.6340087-07:00"),
+            CreatedDate = DateTimeOffset.Parse("2025-05-23T05:41:53.6403728-07:00"),
+            RefreshDate = DateTimeOffset.Parse("2025-05-23T05:41:53.6555975-07:00"),
             LastFrameworkVersion = "9.1.2"
         }
     };

@@ -5,6 +5,7 @@ using BlazorForKids.Designer.Web.Widgets.Shared;
 using BlazorForKidsSampleDatabase.Domain.Entities;
 using BlazorForKidsSampleDatabase.Web;
 using BlazorForKidsSampleDatabase.Web.Source.Components;
+using BlazorForKidsSampleDatabase.Web.Source.Features.EmployeeFeatures;
 using BlazorForKidsSampleDatabase.Web.Source.Features.HomeFeatures.Views;
 using BlazorForKidsSampleDatabase.Web.Source.Main;
 using BootstrapIconsForDotNet;
@@ -16,7 +17,10 @@ namespace BlazorForKidsSampleDatabase.Web.Source.Features
     [Layout(typeof(MainLayout))]
     public partial class HomeLayout : IBkApplicationLayout
     {
-       
+
+
+      
+
 
         public void LayoutDesigner(IBkLayoutBuilder builder)
         {
@@ -63,13 +67,24 @@ namespace BlazorForKidsSampleDatabase.Web.Source.Features
                     content.DisplayComponent<DepartmentsTable>();
                 });
             });
+
+           
         }
 
         public void ComponentsDesigner(IBkComponentsBuilder builder)
         {
-            builder.CreateGridView<EmployeeModel,Employee>("EmployeesTable");
+            builder.CreateGridView<EmployeeModel,Employee>("EmployeesTable", grid =>
+            {
+                grid.AddLinkColumn<EmployeeInfoEditFormPage>("Info", link =>
+                {
+                    link.AddQueryParameter(a=>a.Id,"EmployeeId");
+                });
+            });
+
+
             builder.CreateGridView<DepartmentModel, Department>("DepartmentsTable");
-         
+
+           
         }
     }
 }
