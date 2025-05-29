@@ -7,6 +7,7 @@ using BlazorForKidsSampleDatabase.Web;
 using BlazorForKidsSampleDatabase.Web.Source.Components;
 using BlazorForKidsSampleDatabase.Web.Source.Features.EmployeeFeatures;
 using BlazorForKidsSampleDatabase.Web.Source.Features.HomeFeatures.Views;
+using BlazorForKidsSampleDatabase.Web.Source.Features.TrainingFeatures;
 using BlazorForKidsSampleDatabase.Web.Source.Main;
 using BootstrapIconsForDotNet;
 using Microsoft.AspNetCore.Components;
@@ -31,6 +32,15 @@ namespace BlazorForKidsSampleDatabase.Web.Source.Features
                     menu.AddMenuItem<HomePage>();
                     menu.AddMenuItem<EmployeesPage>();
                     menu.AddMenuItem<DepartmentsPage>();
+                    menu.AddMenuItem<TrainingDocumentsPage>();
+                    menu.AddMenuItem<LoginPage>(options =>
+                    {
+                        options.HiddenToAuthenticatedUsers();
+                    });
+                    menu.AddMenuItem<LogoutPage>(options =>
+                    {
+                        options.VisibleToAuthenticatedUsers();
+                    });
                 });
             });
         }

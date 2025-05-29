@@ -19,6 +19,7 @@ namespace BlazorForKidsSampleDatabase.Web
 
             await dbContext.SeedDepartments();
             await dbContext.SeedEmployee();
+            await CreateSampleUsersAndRoles(scope);
         }
 
         private static async Task CreateSampleUsersAndRoles(AsyncServiceScope scope)
